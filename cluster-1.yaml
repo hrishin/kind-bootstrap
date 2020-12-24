@@ -4,6 +4,15 @@ containerdConfigPatches:
   - |-
     [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runsc]
       runtime_type = "io.containerd.runsc.v1"
+kubeadmConfigPatches:
+- |
+  apiVersion: kubeadm.k8s.io/v1beta2
+  kind: ClusterConfiguration
+  metadata:
+    name: config
+  apiServer:
+    extraArgs:
+      "enable-admission-plugins": "ServiceAccount,MutatingAdmissionWebhook"
 nodes:
   - role: control-plane
     image: kindest/node:v1.18.8
