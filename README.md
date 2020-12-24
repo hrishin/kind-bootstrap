@@ -15,7 +15,7 @@ It spins up a cluster with:
 
 ### Set up cluster
 ```bash
-$ git clone https://github.com/MarshallWace/kind-bootstrap.git
+$ git clone https://github.com/hrishin/kind-bootstrap.git
 $ cd kind-bootstrap/
 ```
 There are 2 clusters configurations
@@ -28,7 +28,6 @@ Both clusters have 3 nodes. The only change in the `cluster-2` is, one worker no
 ### Use cluster-1:
 ```bash
 $ kind create cluster --config cluster-1.yaml --name mw
-Creating cluster "mw" ...
 Creating cluster "mw" ...
  ✓ Ensuring node image (ghcr.io/marshallwace/kind-node:17) 🖼 
  ✓ Ensuring node image (ghcr.io/marshallwace/kind-node:18) 🖼 
